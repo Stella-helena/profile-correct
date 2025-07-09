@@ -1,209 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stella Helena - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #f4f1ee;
-      --text-color: #2e2c2b;
-      --accent: #5e4b3c;
-      --card-bg: #ffffff;
-      --hover-bg: #ebe3d5;
-    }
-
-    body.dark-mode {
-      --bg-color: #2a2a2a;
-      --text-color: #eee;
-      --accent: #d4af7f;
-      --card-bg: #3a3a3a;
-      --hover-bg: #444;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header {
-      background-color: var(--accent);
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    .toggle-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: 2px solid #fff;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .toggle-btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    header h1 {
-      font-size: 2.5em;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #f0f0f0;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: var(--accent);
-      border-bottom: 2px solid #ccc;
-      margin-bottom: 20px;
-      padding-bottom: 5px;
-      font-size: 1.8em;
-    }
-
-    .project {
-      background: var(--card-bg);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-      transition: transform 0.2s ease, background-color 0.3s;
-    }
-
-    .project:hover {
-      transform: scale(1.02);
-      background-color: var(--hover-bg);
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      background: var(--card-bg);
-      margin: 8px 0;
-      padding: 10px 15px;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background-color: #ddd;
-      color: #444;
-      font-size: 0.95em;
-      margin-top: 40px;
-    }
-
-    body.dark-mode footer {
-      background-color: #1f1f1f;
-      color: #aaa;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-
-      section {
-        padding: 20px 15px;
-      }
-
-      h2 {
-        font-size: 1.5em;
-      }
-
-      .toggle-btn {
-        top: 10px;
-        right: 10px;
-        padding: 4px 8px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
 </head>
+
 <body>
+    <video src="Teaser 2.mp4" height="255" controls poster="147A9634.JPG"></video>
 
-  <header>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Theme</button>
-    <h1>Hi, I'm Stella Helena</h1>
-    <p>Frontend Web Developer & HTML Learner</p>
-  </header>
+    <audio
+        src="Aa_Mere_Hamjoli_Aa__Mohammed_Rafi,_Lata_Mangeshkar__Jeene_Ki_Raah_1969_Songs__Jeetendra,_Tanuja(128k).m4a"
+        controls></audio>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I’m a beginner web developer learning HTML and building my portfolio site! I love turning ideas into clean, simple web pages and improving my skills every day.</p>
-  </section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=xomF6AE6orIqfJ94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>My Profile Page</h3>
-      <p>A basic web profile showing my hobbies and a favorite quote using only HTML and a touch of CSS.</p>
-      <a href="https://stella-helena.github.io/profile/" target="_blank">View Project</a>
-    </div>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS (beginner)</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/stella-helena" target="_blank">stella-helena</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Stella Helena | Built with ❤️ and HTML
-  </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
 
 </body>
+
 </html>
