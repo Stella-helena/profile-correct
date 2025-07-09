@@ -1,87 +1,209 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Profile</title>
-    <style>
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f0f4f8;
-        color: #333;
-        text-align: center;
-        padding: 40px;
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stella Helena - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f4f1ee;
+      --text-color: #2e2c2b;
+      --accent: #5e4b3c;
+      --card-bg: #ffffff;
+      --hover-bg: #ebe3d5;
+    }
+
+    body.dark-mode {
+      --bg-color: #2a2a2a;
+      --text-color: #eee;
+      --accent: #d4af7f;
+      --card-bg: #3a3a3a;
+      --hover-bg: #444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--accent);
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #f0f0f0;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+      font-size: 1.8em;
+    }
+
+    .project {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      transition: transform 0.2s ease, background-color 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+      background-color: var(--hover-bg);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: var(--card-bg);
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #ddd;
+      color: #444;
+      font-size: 0.95em;
+      margin-top: 40px;
+    }
+
+    body.dark-mode footer {
+      background-color: #1f1f1f;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
       }
 
-      img {
-        width: 150px;
-        border-radius: 50%;
-        margin-top: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      section {
+        padding: 20px 15px;
       }
 
-      h1 {
-        color: #2c3e50;
-        margin-bottom: 10px;
+      h2 {
+        font-size: 1.5em;
       }
 
-      ul {
-        list-style: none;
-        padding: 0;
+      .toggle-btn {
+        top: 10px;
+        right: 10px;
+        padding: 4px 8px;
       }
+    }
+  </style>
+</head>
+<body>
 
-      li {
-        background-color: #ffffff;
-        margin: 8px auto;
-        padding: 10px;
-        border-radius: 8px;
-        max-width: 300px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
+  <header>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Theme</button>
+    <h1>Hi, I'm Stella Helena</h1>
+    <p>Frontend Web Developer & HTML Learner</p>
+  </header>
 
-      a {
-        color: #2980b9;
-        text-decoration: none;
-        font-weight: bold;
-      }
+  <section>
+    <h2>About Me</h2>
+    <p>I’m a beginner web developer learning HTML and building my portfolio site! I love turning ideas into clean, simple web pages and improving my skills every day.</p>
+  </section>
 
-      a:hover {
-        text-decoration: underline;
-      }
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>My Profile Page</h3>
+      <p>A basic web profile showing my hobbies and a favorite quote using only HTML and a touch of CSS.</p>
+      <a href="https://stella-helena.github.io/profile/" target="_blank">View Project</a>
+    </div>
+  </section>
 
-      blockquote {
-        font-style: italic;
-        margin: 30px auto;
-        max-width: 600px;
-        background-color: #e3f2fd;
-        padding: 15px;
-        border-left: 5px solid #2196f3;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Hi, I'm Your Name</h1>
-
-    <img src="https://via.placeholder.com/150" alt="My Profile Photo">
-
-    <p>Hello! I'm learning HTML and building my first web page.</p>
-
-    <h2>My Hobbies</h2>
+  <section>
+    <h2>Skills</h2>
     <ul>
-      <li>Reading</li>
-      <li>Drawing</li>
-      <li>Coding</li>
-      <li>Playing games</li>
+      <li>HTML</li>
+      <li>CSS (beginner)</li>
+      <li>Git & GitHub</li>
     </ul>
+  </section>
 
-    <p>Visit my favorite site: 
-      <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
-    </p>
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/stella-helena" target="_blank">stella-helena</a></p>
+  </section>
 
-    <h2>Contact Me</h2>
-    <p>Email: yourname@example.com</p>
+  <footer>
+    &copy; 2025 Stella Helena | Built with ❤️ and HTML
+  </footer>
 
-    <h2>My Favorite Quote</h2>
-    <blockquote>
-      "The best way to predict the future is to invent it."
-    </blockquote>
-  </body>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
 </html>
